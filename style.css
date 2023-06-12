@@ -1,0 +1,101 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.wrapper{
+    height: 100vh;
+   
+    /* overflow-y: auto; */
+    overflow-x: hidden;
+    /* no scrolling over x axis */
+    perspective: 20px;
+    /* distance between plane made by z=0 and my eyes is 20px 3d enabled
+*/
+
+}
+.container{
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content:center ;
+    align-items: center;
+    transform-style: preserve-3d;
+    z-index: -1;
+}
+
+.BackGroundImg,.ForeGroundImg{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+.ForeGroundImg{
+   height: 300px;
+   width: 200px;
+   
+}
+
+.BackGroundImg{
+    transform: translateZ(-20px) scale(3);
+}
+.ForeGroundImg{
+    transform: translateZ(-10px) scale(3);
+}
+
+h1{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 5rem;
+    letter-spacing: 4px;
+    font-size: 10rem;
+    color: white;
+    text-shadow: 0 0 10px rgb(0,0, 0,.3);
+
+}
+
+section{
+    background-color: rgb(45,45,45);
+    color: white;
+    padding: 5rem ;
+}
+.bg1{
+    background-image: url(meditation.jpg);
+}
+.bg2{
+    background-image: url(yoga.jpg);
+}
+.bg3{
+    background-image: url(mind-body.jpg);
+}
+
+.hd{
+    font-size: 5rem;
+    padding: 0 10rem;
+}
+.text{
+    font-size: 1.5rem;
+    padding: 0 10rem;
+    margin: 5rem 0;
+}
+.bg{
+    position: relative;    
+    width: 100%;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+
+}
+.desc{
+    position: absolute;
+    color: white;
+    padding: 0.5rem 2.5rem;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 3.5rem;
+    font-weight: 600;
+}
